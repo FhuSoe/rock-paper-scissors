@@ -1,2 +1,2 @@
 # rock-paper-scissors
-Practicing JavaScript with a rockPaperScissors program
+The reason i made this repository is so could start practicing JavaScript with a simple rockPaperScissors program.
