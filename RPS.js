@@ -11,6 +11,8 @@ function getComputerChoice() {
 
 console.log(getComputerChoice());
 
+//user input a choice
+//function return that choice
 function getHumanChoice() {
   let inputChoice =  prompt("What will you choose ?");
   return inputChoice;
