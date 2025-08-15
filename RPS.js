@@ -19,3 +19,8 @@ function getHumanChoice() {
 }
 
 console.log(getHumanChoice());
+
+//A Variable to keep track of the score
+//Tracks the user wins
+//Tracks the Computer wins
+//Tracks the Draws
