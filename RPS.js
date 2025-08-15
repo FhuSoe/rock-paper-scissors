@@ -18,8 +18,6 @@ function getHumanChoice() {
   return inputChoice;
 }
 
-console.log(getHumanChoice());
-
 //A Variable to keep track of the score
 //Tracks the user wins
 //Tracks the Computer wins
@@ -34,10 +32,20 @@ let computerScore = 0;
 // Increment the score of the round winner
 
 function playRound(humanChoice, computerChoice) {
-  
+  if ( "Rock" >= "Scissors") {
+    return alert("Rock beats scissors");
+  } else if ("Paper" >= "Rock") {
+    return alert("Papers beats rock");
+  } else if ("Scissors" >= "Paper") {
+    return alert("Scissors beats paper");
+  } else {
+    return alert("Draw")
+  }
 }
 
 const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice();
 
 playRound(humanSelection, computerSelection);
+
+console.log(playRound())
