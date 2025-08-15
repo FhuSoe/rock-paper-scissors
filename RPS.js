@@ -32,3 +32,7 @@ let computerScore = 0;
 //Takes both of those arguments
 //play a single round
 // Increment the score of the round winner
+
+function playRound(humanChoice, computerChoice) {
+  
+}
