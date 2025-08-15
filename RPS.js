@@ -24,3 +24,6 @@ console.log(getHumanChoice());
 //Tracks the user wins
 //Tracks the Computer wins
 //Tracks the Draws
+
+let humanScore = 0;
+let computerScore = 0;
