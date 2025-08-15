@@ -11,3 +11,9 @@ function getComputerChoice() {
 
 console.log(getComputerChoice());
 
+function getHumanChoice() {
+  let inputChoice =  prompt("What will you choose ?");
+  return inputChoice;
+}
+
+console.log(getHumanChoice());
