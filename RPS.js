@@ -27,3 +27,8 @@ console.log(getHumanChoice());
 
 let humanScore = 0;
 let computerScore = 0;
+
+//Write a function that takes user and computer inputs
+//Takes both of those arguments
+//play a single round
+// Increment the score of the round winner
