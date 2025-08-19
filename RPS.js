@@ -40,9 +40,11 @@ else if ( (humanChoice === "rock" && computerChoice === "scissors") ||
    (humanChoice === "scissors" && computerChoice === "paper") ||
    (humanChoice === "paper" && computerChoice === "rock") 
 ) {
+  humanScore++;
   return `You win! ${humanChoice} beats ${computerChoice}`
 } else {
- return `you lost! ${humanChoice} computer wins! ${computerChoice}` }
+  computerScore++;
+ return `You lost! ${humanChoice} computer wins! ${computerChoice}` }
 }
 
 
@@ -50,3 +52,5 @@ const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice();
 
 console.log(playRound(humanSelection, computerSelection));
+
+console.log(`Human Score ${humanScore}, Computer score ${computerScore}` )
