@@ -32,15 +32,20 @@ let computerScore = 0;
 // Increment the score of the round winner
 
 function playRound(humanChoice, computerChoice) {
-  if ( "Rock" >= "Scissors") {
-    return alert("Rock beats scissors");
-  } else if ("Paper" >= "Rock") {
-    return alert("Papers beats rock");
-  } else if ("Scissors" >= "Paper") {
-    return alert("Scissors beats paper");
-  } else {
-    return alert("Draw")
-  }
+  humanChoice = humanChoice.toLowerCase();
+  computerChoice = computerChoice.toLowerCase();
+
+  if (humanChoice === computerChoice) {
+    return alert("Draw!");
+} else if (humanChoice === "rock" && computerChoice === "scissors") {
+  return alert("You win! Rock beats scissors");
+} else if (humanChoice === "scissors" && computerChoice === "paper") {
+  return alert("You win! Scissors beats paper");
+} else if (humanChoice === "paper" && computerChoice === "rock") {
+  return alert("You win! Paper beats rocks");
+} else {
+  return alert("You lost! Computer wins!");
+}
 }
 
 const humanSelection = getHumanChoice();
