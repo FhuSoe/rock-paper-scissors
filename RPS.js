@@ -9,13 +9,11 @@ function getComputerChoice() {
   if (CC === 3) return "Scissors";
 }
 
-console.log(getComputerChoice());
-
 //user input a choice
 //function return that choice
 function getHumanChoice() {
-  let inputChoice =  prompt("What will you choose ?");
-  return inputChoice;
+  let userChoice = prompt("What will you choose ?");
+  return userChoice
 }
 
 //A Variable to keep track of the score
@@ -36,21 +34,19 @@ function playRound(humanChoice, computerChoice) {
   computerChoice = computerChoice.toLowerCase();
 
   if (humanChoice === computerChoice) {
-    return alert("Draw!");
-} else if (humanChoice === "rock" && computerChoice === "scissors") {
-  return alert("You win! Rock beats scissors");
-} else if (humanChoice === "scissors" && computerChoice === "paper") {
-  return alert("You win! Scissors beats paper");
-} else if (humanChoice === "paper" && computerChoice === "rock") {
-  return alert("You win! Paper beats rocks");
+    return "Draw!";
+} 
+else if ( (humanChoice === "rock" && computerChoice === "scissors") || 
+   (humanChoice === "scissors" && computerChoice === "paper") ||
+   (humanChoice === "paper" && computerChoice === "rock") 
+) {
+  return `You win! ${humanChoice} beats ${computerChoice}`
 } else {
-  return alert("You lost! Computer wins!");
+ return `you lost! ${humanChoice} computer wins! ${computerChoice}` }
 }
-}
+
 
 const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice();
 
-playRound(humanSelection, computerSelection);
-
-console.log(playRound())
+console.log(playRound(humanSelection, computerSelection));
