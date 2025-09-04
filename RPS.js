@@ -47,14 +47,15 @@ function playGame(){
   }
 
 
-  // The function that plays the game to exactly 5 rounds
-// while (humanScore < 5 && computerScore <5) {
-//   const humanSelection = getHumanChoice();
-//   const computerSelection = getComputerChoice();
-//   console.log(playRound(humanSelection, computerSelection));
-//   console.log(`Human Score ${humanScore}, Computer score ${computerScore}` );
-// }
+  
+while (humanScore < 5 && computerScore <5) {
+  const humanSelection = getHumanChoice();
+  const computerSelection = getComputerChoice();
+  console.log(playRound(humanSelection, computerSelection));
+  console.log(`Human Score ${humanScore}, Computer score ${computerScore}` );
+}
 
+// The function that plays the game to exactly 5 rounds
 // if (humanScore === 5){
 //     console.log("Yay Human wins!") 
 //   } else if (computerScore === 5) {
