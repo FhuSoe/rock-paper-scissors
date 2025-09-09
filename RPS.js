@@ -16,6 +16,8 @@ function getHumanChoice() {
   return userChoice
 }
 
+
+
 //A Variable to keep track of the score
 //Tracks the user wins
 //Tracks the Computer wins
@@ -25,7 +27,6 @@ function getHumanChoice() {
 //play a single round to test
 // Increment the score of the round winner until one of them reaches 5 wins
 
-function playGame(){
   let humanScore = 0;
   let computerScore = 0;
 
@@ -46,14 +47,36 @@ function playGame(){
     return `You lost! ${humanChoice} computer wins! ${computerChoice}` }
   }
 
+const rock = document.querySelector("#rock");
+      rock.addEventListener("click", () => {
+        const computerSelection = getComputerChoice()
+        const result = playRound("rock", computerSelection);
+        console.log(result);
+        console.log(`Human Score ${humanScore}, Computer score ${computerScore}` );
+      });
 
+const paper = document.querySelector("#paper");
+      paper.addEventListener("click", () => {
+        const computerSelection = getComputerChoice()
+        const result = playRound("paper", computerSelection);
+        console.log(result);
+        console.log(`Human Score ${humanScore}, Computer score ${computerScore}` );
+      });
+
+const scissors = document.querySelector("#scissors");
+      scissors.addEventListener("click", () => {
+        const computerSelection = getComputerChoice()
+        const result = playRound("scissors", computerSelection);
+        console.log(result);
+        console.log(`Human Score ${humanScore}, Computer score ${computerScore}` );
+      });
   
-while (humanScore < 5 && computerScore <5) {
-  const humanSelection = getHumanChoice();
-  const computerSelection = getComputerChoice();
-  console.log(playRound(humanSelection, computerSelection));
-  console.log(`Human Score ${humanScore}, Computer score ${computerScore}` );
-}
+// while (humanScore < 5 && computerScore <5) {
+//   const humanSelection = getHumanChoice();
+//   const computerSelection = getComputerChoice();
+//   console.log(playRound(humanSelection, computerSelection));
+//   console.log(`Human Score ${humanScore}, Computer score ${computerScore}` );
+// }
 
 // The function that plays the game to exactly 5 rounds
 // if (humanScore === 5){
@@ -61,6 +84,3 @@ while (humanScore < 5 && computerScore <5) {
 //   } else if (computerScore === 5) {
 //     console.log("Boo You lost to a computer")
 //   }
-}
-
-playGame()
