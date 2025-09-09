@@ -47,29 +47,49 @@ function getHumanChoice() {
     return `You lost! ${humanChoice} computer wins! ${computerChoice}` }
   }
 
+  //Buttons Event listener
+ const gameResult = document.querySelector("#divResult");
 const rock = document.querySelector("#rock");
       rock.addEventListener("click", () => {
         const computerSelection = getComputerChoice()
         const result = playRound("rock", computerSelection);
-        console.log(result);
-        console.log(`Human Score ${humanScore}, Computer score ${computerScore}` );
-      });
+        gameResult.textContent = `${result}. The score is now Human Score ${humanScore}, Computer score ${computerScore}`;
+        
+        if (humanScore === 5){
+          gameResult.textContent = "Yay Human wins!"; 
+        } else if (computerScore === 5) {
+          gameResult.textContent = "Boo You lost to a computer"
+        }
+            });
 
 const paper = document.querySelector("#paper");
       paper.addEventListener("click", () => {
         const computerSelection = getComputerChoice()
         const result = playRound("paper", computerSelection);
-        console.log(result);
-        console.log(`Human Score ${humanScore}, Computer score ${computerScore}` );
+        gameResult.textContent = `${result}. The score is now Human Score ${humanScore}, Computer score ${computerScore}`;
+
+        if (humanScore === 5){
+          gameResult.textContent = "Yay Human wins!"; 
+        } else if (computerScore === 5) {
+          gameResult.textContent = "Boo You lost to a computer"
+        }
       });
 
 const scissors = document.querySelector("#scissors");
       scissors.addEventListener("click", () => {
         const computerSelection = getComputerChoice()
         const result = playRound("scissors", computerSelection);
-        console.log(result);
-        console.log(`Human Score ${humanScore}, Computer score ${computerScore}` );
+        gameResult.textContent = `${result}. The score is now Human Score ${humanScore}, Computer score ${computerScore}`;
+      
+        if (humanScore === 5){
+          gameResult.textContent = "Yay Human wins!"; 
+        } else if (computerScore === 5) {
+          gameResult.textContent = "Boo You lost to a computer"
+        }
       });
+
+
+
   
 // while (humanScore < 5 && computerScore <5) {
 //   const humanSelection = getHumanChoice();
@@ -79,8 +99,8 @@ const scissors = document.querySelector("#scissors");
 // }
 
 // The function that plays the game to exactly 5 rounds
-// if (humanScore === 5){
-//     console.log("Yay Human wins!") 
-//   } else if (computerScore === 5) {
-//     console.log("Boo You lost to a computer")
-//   }
+if (humanScore === 5){
+    console.log("Yay Human wins!") 
+  } else if (computerScore === 5) {
+    console.log("Boo You lost to a computer")
+  }
